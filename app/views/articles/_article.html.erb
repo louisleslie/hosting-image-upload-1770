@@ -1,4 +1,7 @@
 <div id="<%= dom_id article %>">
+  <% if article.photo.attached? %>
+    <%= cl_image_tag article.photo.key %>
+  <% end %>
   <p>
     <strong>Title:</strong>
     <%= article.title %>
